@@ -1,0 +1,9 @@
+<div class="bg-image">
+    <div class="row justify-content-center align-items-center h-100">
+        <div class="col-sm-4 card text-white p-4">
+
+            <app-login-form *ngIf="!newUser" (newUserEvent)="showRegisterForm(true)"></app-login-form>
+            <app-register-form *ngIf="newUser" (finishedEvent)="showRegisterForm(false)"></app-register-form>
+        </div>
+    </div>
+</div>
